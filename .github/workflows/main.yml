@@ -1,5 +1,5 @@
 name: Build and Push Docker Image
-run: find . -name "Dockerfile"
+
 
 on:
   push:
@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest  
 
     steps:
+      - name: Debug workflow
+        run: find . -name "Dockerfile"
+
       - name: Check out code
         uses: actions/checkout@v4
 
